@@ -16,6 +16,7 @@ Builds a description in the "separation of description from action" model that w
 
 ```scala
 object Calculator extends App {
+  // Interpreters
   def eval(expr: Expression): Double =
     expr match {
       case Literal(value)              => value
@@ -56,6 +57,7 @@ sealed abstract class Expression {
     Division(this, that)
 }
 object Expression {
+  // Constructor
   def apply(value: Double): Expression =
     Literal(value)
 }
@@ -76,9 +78,9 @@ final case class Multiplication(left: Expression, right: Expression)
 Reification is an implementation technique for interpreters.
 
 Reify:
-- constructors
-- combinators
-- but **not** interpreters
+- Constructors. We capture the parameters to the constructor but not `this`
+- Combinators. We capture parameters *and* `this`.
+- Interpreters we **do not** reify.
 
 Interpreters are then structural recursion over the algebraic data type that we reified into.
 
