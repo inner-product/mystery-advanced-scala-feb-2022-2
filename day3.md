@@ -15,6 +15,14 @@ Caching.
 
 Spark semantics, particularly around caching.
 
+Code organization.
+
+Type classes. Building something like the Aggregator type in Scalding / Algebird / C??????
+
+
+
+## Code So Far
+
 ```scala
 package stream
 
