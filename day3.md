@@ -17,8 +17,9 @@ Spark semantics, particularly around caching.
 
 Code organization.
 
-Type classes. Building something like the Aggregator type in Scalding / Algebird / C??????
+Type classes. Building something like the Aggregator type in Scalding / Algebird / Ch?????
 
+Efficiency: space and time complexity. Spark optimization. Data structure in the standard library.
 
 
 ## Code So Far
